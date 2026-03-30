@@ -202,24 +202,28 @@ Intent-and-Trajectory-Predictor/
 └── README.md
 ```
 -->
-## Repository Structure
 
+## Repository Structure
 ```
 Intent-and-Trajectory-Predictor/
-├── 01-dataprep-v2.ipynb       # Data preparation pipeline (nuScenes → processed files)
-├── 02-model-train-v2.ipynb    # IntentFormer training + CV baseline + ablation
-├── 03-eval-v2.ipynb           # Evaluation, metrics, visualizations
+│
+├── 01-dataprep-v2.ipynb           # Data preparation pipeline (nuScenes)
+├── 02-model-train-v2.ipynb        # IntentFormer training + CV baseline
+├── 03-eval-v2.ipynb               # Evaluation, metrics, visualizations
+│
+├── intentformer_architecture.png  # Model architecture diagram
+│
 ├── Training_Output/
-│   ├── evaluation_summary.md  # Test set metrics (ADE, FDE, per-category)
-│   ├── training_curves.png    # Loss, ADE, mode collapse, intent accuracy over epochs
-│   ├── trajectory_predictions.png  # Best/worst/collapse sample visualizations
-│   ├── temporal_ade_curve.png # Per-timestep oracle ADE over 3s horizon
-│   └── mode_weight_distribution.png  # π weight entropy and collapse analysis
+│   ├── evaluation_summary.md         # Test set metrics (ADE, FDE, per-category)
+│   ├── training_curves.png           # Loss, ADE, mode collapse, intent accuracy
+│   ├── trajectory_predictions.png    # Best/worst/collapse sample visualizations
+│   ├── temporal_ade_curve.png        # Per-timestep oracle ADE over 3s horizon
+│   ├── mode_weight_distribution.png  # π weight entropy and collapse analysis
+│
 ├── .gitignore
 └── README.md
 ```
 ---
-
 ## Notes
 
 - All notebooks are self-contained and detect the environment (Kaggle vs. Colab) automatically.
