@@ -192,13 +192,30 @@ Metrics are reported per category (Pedestrian / Bicycle) and overall, with 95% b
 
 ---
 
-## Repository Structure
+<!--## Repository Structure
 
 ```
 Intent-and-Trajectory-Predictor/
 ├── 01-dataprep-v2.ipynb      # Data preparation pipeline
 ├── 02-model-train-v2.ipynb   # Model definition + training
 ├── 03-eval-v2.ipynb          # Evaluation + visualization
+└── README.md
+```
+-->
+## Repository Structure
+
+```
+Intent-and-Trajectory-Predictor/
+├── 01-dataprep-v2.ipynb       # Data preparation pipeline (nuScenes → processed files)
+├── 02-model-train-v2.ipynb    # IntentFormer training + CV baseline + ablation
+├── 03-eval-v2.ipynb           # Evaluation, metrics, visualizations
+├── Training_Output/
+│   ├── evaluation_summary.md  # Test set metrics (ADE, FDE, per-category)
+│   ├── training_curves.png    # Loss, ADE, mode collapse, intent accuracy over epochs
+│   ├── trajectory_predictions.png  # Best/worst/collapse sample visualizations
+│   ├── temporal_ade_curve.png # Per-timestep oracle ADE over 3s horizon
+│   └── mode_weight_distribution.png  # π weight entropy and collapse analysis
+├── .gitignore
 └── README.md
 ```
 ---
